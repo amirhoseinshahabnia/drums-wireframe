@@ -741,8 +741,8 @@
             <p>© Steven Slate Drums</p>
             <div class="theme-switcher">
                 <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                    <span class="theme-icon">🌙</span>
-                    <span class="theme-label">Dark Mode</span>
+                    <span class="theme-icon">☀️</span>
+                    <span class="theme-label">Light Mode</span>
                 </button>
             </div>
         </div>
@@ -753,8 +753,8 @@
         const themeToggle = document.getElementById('themeToggle');
         const body = document.body;
 
-        // Check for saved theme preference or default to light mode
-        const currentTheme = localStorage.getItem('theme') || 'light';
+        // Check for saved theme preference or default to dark mode
+        const currentTheme = localStorage.getItem('theme') || 'dark';
 
         if (currentTheme === 'dark') {
             body.classList.add('dark-theme');
