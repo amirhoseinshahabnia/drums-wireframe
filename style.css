@@ -23,6 +23,13 @@
   --primary-800: hsl(59, 100%, 20%);
   --primary-900: hsl(59, 100%, 12%);
 
+  /* Shiny colors for feature cards (diverse hues, neutral saturation) */
+  --shiny-1: hsl(200, 50%, 55%);
+  --shiny-2: hsl(280, 45%, 58%);
+  --shiny-3: hsl(59, 55%, 52%);
+  --shiny-4: hsl(15, 50%, 57%);
+  --shiny-5: hsl(140, 48%, 56%);
+
   /* Semantic color mappings for light theme */
   --text: var(--gray-900);
   --muted: var(--gray-600);
@@ -460,14 +467,60 @@ body.dark-theme .nav {
   background: var(--border);
   border-bottom: 1px dashed var(--border);
   transform: scaleX(0);
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.4s ease;
   transform-origin: left;
+}
+
+/* Shiny highlight bars for each card */
+.feature-card:nth-child(1)::before {
+  background: var(--shiny-1);
+  border-bottom-color: var(--shiny-1);
+}
+
+.feature-card:nth-child(2)::before {
+  background: var(--shiny-2);
+  border-bottom-color: var(--shiny-2);
+}
+
+.feature-card:nth-child(3)::before {
+  background: var(--shiny-3);
+  border-bottom-color: var(--shiny-3);
+}
+
+.feature-card:nth-child(4)::before {
+  background: var(--shiny-4);
+  border-bottom-color: var(--shiny-4);
+}
+
+.feature-card:nth-child(5)::before {
+  background: var(--shiny-5);
+  border-bottom-color: var(--shiny-5);
 }
 
 .feature-card:hover {
   transform: translateY(-12px);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
-  border-color: var(--border);
+}
+
+/* Shiny borders on hover for each card */
+.feature-card:nth-child(1):hover {
+  border-color: var(--shiny-1);
+}
+
+.feature-card:nth-child(2):hover {
+  border-color: var(--shiny-2);
+}
+
+.feature-card:nth-child(3):hover {
+  border-color: var(--shiny-3);
+}
+
+.feature-card:nth-child(4):hover {
+  border-color: var(--shiny-4);
+}
+
+.feature-card:nth-child(5):hover {
+  border-color: var(--shiny-5);
 }
 
 .feature-card:hover::before {
@@ -482,8 +535,8 @@ body.dark-theme .nav {
 
 .feature-card-highlight::before {
   transform: scaleX(1);
-  background: var(--border);
-  border-bottom: 1px dashed var(--border);
+  background: var(--shiny-3);
+  border-bottom: 1px dashed var(--shiny-3);
 }
 
 .feature-badge {
@@ -520,15 +573,36 @@ body.dark-theme .nav {
   font-weight: 900;
   line-height: 1;
   color: var(--accent);
-  opacity: 0.12;
+  opacity: 0.2;
   flex-shrink: 0;
   font-family: "Inter", sans-serif;
   letter-spacing: -0.03em;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+/* Shiny numbers for each card */
+.feature-card:nth-child(1) .feature-number {
+  color: var(--shiny-1);
+}
+
+.feature-card:nth-child(2) .feature-number {
+  color: var(--shiny-2);
+}
+
+.feature-card:nth-child(3) .feature-number {
+  color: var(--shiny-3);
+}
+
+.feature-card:nth-child(4) .feature-number {
+  color: var(--shiny-4);
+}
+
+.feature-card:nth-child(5) .feature-number {
+  color: var(--shiny-5);
 }
 
 .feature-card:hover .feature-number {
-  opacity: 0.2;
+  opacity: 0.4;
 }
 
 .feature-card h3 {
@@ -569,20 +643,99 @@ body.dark-theme .nav {
   color: var(--text);
   letter-spacing: 0.1px;
   transition: all 0.2s ease;
-  border: 1px dashed var(--border);
+  border: 1px solid var(--border);
+}
+
+/* Shiny stat tags for each card */
+.feature-card:nth-child(1) .stat {
+  border-color: var(--shiny-1);
+  color: var(--shiny-1);
+}
+
+.feature-card:nth-child(2) .stat {
+  border-color: var(--shiny-2);
+  color: var(--shiny-2);
+}
+
+.feature-card:nth-child(3) .stat {
+  border-color: var(--shiny-3);
+  color: var(--shiny-3);
+}
+
+.feature-card:nth-child(4) .stat {
+  border-color: var(--shiny-4);
+  color: var(--shiny-4);
+}
+
+.feature-card:nth-child(5) .stat {
+  border-color: var(--shiny-5);
+  color: var(--shiny-5);
 }
 
 .feature-card:hover .stat {
   background: var(--gray-50);
-  border-color: var(--accent);
   border-style: solid;
   transform: translateY(-1px);
 }
 
-body.dark-theme .feature-card:hover .stat {
-  background: var(--accent);
+.feature-card:nth-child(1):hover .stat {
+  background: var(--shiny-1);
+  border-color: var(--shiny-1);
+  color: white;
+}
+
+.feature-card:nth-child(2):hover .stat {
+  background: var(--shiny-2);
+  border-color: var(--shiny-2);
+  color: white;
+}
+
+.feature-card:nth-child(3):hover .stat {
+  background: var(--shiny-3);
+  border-color: var(--shiny-3);
+  color: white;
+}
+
+.feature-card:nth-child(4):hover .stat {
+  background: var(--shiny-4);
+  border-color: var(--shiny-4);
+  color: white;
+}
+
+.feature-card:nth-child(5):hover .stat {
+  background: var(--shiny-5);
+  border-color: var(--shiny-5);
+  color: white;
+}
+
+body.dark-theme .feature-card:nth-child(1):hover .stat {
+  background: var(--shiny-1);
   color: var(--gray-900);
-  border-color: var(--accent);
+  border-color: var(--shiny-1);
+}
+
+body.dark-theme .feature-card:nth-child(2):hover .stat {
+  background: var(--shiny-2);
+  color: var(--gray-900);
+  border-color: var(--shiny-2);
+}
+
+body.dark-theme .feature-card:nth-child(3):hover .stat {
+  background: var(--shiny-3);
+  color: var(--gray-900);
+  border-color: var(--shiny-3);
+}
+
+body.dark-theme .feature-card:nth-child(4):hover .stat {
+  background: var(--shiny-4);
+  color: var(--gray-900);
+  border-color: var(--shiny-4);
+}
+
+body.dark-theme .feature-card:nth-child(5):hover .stat {
+  background: var(--shiny-5);
+  color: var(--gray-900);
+  border-color: var(--shiny-5);
 }
 
 body.dark-theme .track {
