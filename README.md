@@ -1,40 +1,14 @@
 # Steven Slate Drums - Wireframe Design
 
-A modern, responsive wireframe design for Steven Slate Drums (SSD) product website. This project showcases a clean, professional interface for showcasing drum software products with smooth animations, dark mode support, and an intuitive user experience.
+A modern, responsive wireframe for Steven Slate Drums (SSD) product website. Features a clean interface with smooth animations, comprehensive dark mode support, and a cohesive design system built on a HSL-based gray scale palette.
 
 ## Features
 
-- **Responsive Design**: Fully responsive layout that works seamlessly across desktop, tablet, and mobile devices
-- **Dark Mode**: Complete dark theme implementation with a theme switcher toggle in the footer
-- **Animated Components**:
-  - Infinite sliding album artworks carousel with fade effects
-  - Rotating artist showcase with synchronized quote and image transitions
-  - Animated genre slider in the hero section
-- **Clean UI Elements**:
-  - Minimal playlist tracks with hover interactions
-  - Feature cards with statistics
-  - Testimonials grid layout
-  - FAQ accordion section
-  - Expansion packs showcase
-- **Modern Typography**: Clean, readable fonts with proper spacing and hierarchy
-- **Smooth Transitions**: CSS transitions and animations throughout for a polished experience
-
-## Sections
-
-1. **Hero Section**: Main headline with genre slider animation
-2. **Highlights**: Key feature highlights
-3. **Features & Playlists**: Drum kit features with playable track lists
-4. **Software Parts**: Showcase of drum software components
-5. **Features Grid**: Detailed feature cards with statistics
-6. **Album Artworks**: Infinite scrolling artwork gallery
-7. **Buy Section**: Product purchase section
-8. **Expansion Packs**: Additional product offerings
-9. **FAQ**: Frequently asked questions with expandable answers
-10. **Artist Showcase**: Rotating testimonials from professional producers
-11. **Genres Section**: Genre-focused section with image and copy
-12. **Free Section**: Free trial offering
-13. **Social Proof**: Customer testimonials
-14. **Final CTA**: Call-to-action section
+- **Responsive Design**: Fully responsive across all devices
+- **Dark Mode**: Complete dark theme with theme switcher (defaults to dark mode)
+- **Modern Design System**: HSL-based gray scale color palette (50-900) for consistent theming
+- **Animated Components**: Infinite carousels, rotating showcases, and smooth transitions
+- **Clean UI**: Minimal design with backdrop blur navigation, interactive elements, and polished animations
 
 ## Technology Stack
 
@@ -55,15 +29,25 @@ A modern, responsive wireframe design for Steven Slate Drums (SSD) product websi
 
 3. No build process required - this is a static HTML/CSS/JS project
 
+## Color System
+
+The design uses a HSL-based gray scale system with 10 shades (50-900) that power all colors throughout the site. All colors reference these variables for consistency and easy theming.
+
+**Gray Scale Palette:**
+
+- `--gray-50` through `--gray-900` (HSL format)
+- Semantic mappings: `--text`, `--muted`, `--border`, `--bg-alt`, `--accent`
+- Automatically adapts between light and dark themes
+
 ## Theme Toggle
 
-The website includes a theme switcher in the footer that allows users to toggle between light and dark modes. The preference is saved to localStorage and persists across page reloads.
+Theme switcher in the footer allows toggling between light and dark modes. The preference is saved to localStorage. Dark mode is the default theme.
 
 ## Browser Support
 
 - Modern browsers (Chrome, Firefox, Safari, Edge)
-- CSS Grid and Flexbox support required
-- CSS Custom Properties (CSS Variables) required
+- Requires CSS Grid, Flexbox, and CSS Custom Properties
+- Backdrop filter support recommended (graceful degradation for older browsers)
 
 ## Project Structure
 
@@ -76,25 +60,26 @@ drums-revamp/
 
 ## Customization
 
-The design uses CSS custom properties for easy theming:
+The entire color system is built on HSL gray scale variables. To customize colors, modify the gray scale palette in `style.css`:
 
 ```css
 :root {
-  --text: #0f0f0f;
-  --muted: #6b6b6b;
-  --border: #e6e6e6;
-  --bg-alt: #fafafa;
-  --accent: #000;
+  /* Gray scale palette (HSL format) */
+  --gray-50: hsl(0, 0%, 98%);
+  --gray-100: hsl(0, 0%, 96%);
+  --gray-200: hsl(0, 0%, 90%);
+  /* ... through gray-900 */
+
+  /* Semantic mappings automatically use gray scale */
+  --text: var(--gray-900);
+  --muted: var(--gray-600);
+  --border: var(--gray-200);
+  --bg-alt: var(--gray-50);
+  --accent: var(--gray-900);
 }
 ```
 
-These can be modified to change the overall color scheme.
-
-## Notes
-
-- All images are currently placeholders and should be replaced with actual product images
-- The design follows a wireframe approach, focusing on layout, typography, and user flow
-- All interactive elements are functional and ready for integration with backend services
+All colors throughout the site reference these variables, making global color changes simple and consistent.
 
 ## License
 
