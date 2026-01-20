@@ -11,6 +11,18 @@
   --gray-800: hsl(0, 0%, 10%);
   --gray-900: hsl(0, 0%, 6%);
 
+  /* Primary color palette (base: #DEDB00) */
+  --primary-50: hsl(59, 100%, 95%);
+  --primary-100: hsl(59, 100%, 90%);
+  --primary-200: hsl(59, 100%, 80%);
+  --primary-300: hsl(59, 100%, 70%);
+  --primary-400: hsl(59, 100%, 60%);
+  --primary-500: hsl(59, 100%, 44%);
+  --primary-600: hsl(59, 100%, 35%);
+  --primary-700: hsl(59, 100%, 28%);
+  --primary-800: hsl(59, 100%, 20%);
+  --primary-900: hsl(59, 100%, 12%);
+
   /* Semantic color mappings for light theme */
   --text: var(--gray-900);
   --muted: var(--gray-600);
@@ -42,20 +54,14 @@ body.dark-theme {
   background: var(--gray-900);
 }
 
-body.dark-theme .btn.primary,
-body.dark-theme .btn-cta-primary,
 body.dark-theme .play-btn {
-  background: var(--accent);
+  background: var(--gray-50);
   color: var(--gray-900);
 }
 
 body.dark-theme .btn-cta-primary:hover {
   background: var(--gray-200);
   box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15);
-}
-
-body.dark-theme .play-btn:hover {
-  background: var(--gray-200);
 }
 
 .container {
@@ -123,15 +129,30 @@ body.dark-theme .nav {
   cursor: pointer;
 }
 .btn.primary {
-  background: var(--accent);
-  color: white;
+  background: var(--primary-500);
+  color: var(--gray-900);
   border: none;
+}
+.btn.primary:hover {
+  background: var(--primary-400);
 }
 .btn.ghost {
   background: transparent;
-  border: 1px solid var(--border);
+  border: 1px solid var(--primary-500);
+  color: var(--primary-700);
 }
-
+.btn.ghost.muted {
+  color: var(--muted);
+  border-color: var(--muted);
+}
+.btn.ghost:hover {
+  border-color: var(--primary-400);
+  color: var(--primary-400);
+}
+.btn.ghost.muted:hover {
+  border-color: var(--muted);
+  color: var(--muted);
+}
 /* PLACEHOLDERS */
 .image {
   height: 320px;
@@ -284,9 +305,6 @@ body.dark-theme .nav {
 }
 
 .play-btn:hover {
-  background: var(--accent);
-  color: white;
-  border-color: var(--accent);
   transform: scale(1.05);
 }
 
@@ -584,12 +602,6 @@ body.dark-theme .play-btn {
 body.dark-theme .track:hover .play-btn {
   border-color: var(--gray-600);
   color: var(--muted);
-}
-
-body.dark-theme .play-btn:hover {
-  background: var(--accent);
-  color: var(--gray-900);
-  border-color: var(--accent);
 }
 
 /* ALBUM ARTWORKS */
@@ -1729,8 +1741,8 @@ body.dark-theme .artist-photo-placeholder {
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
-  background: var(--accent);
-  color: white;
+  background: var(--primary-500);
+  color: var(--gray-900);
   border: none;
   transition: all 0.3s ease;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
@@ -1740,11 +1752,11 @@ body.dark-theme .artist-photo-placeholder {
 .btn-cta-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  background: var(--gray-800);
+  background: var(--primary-400);
 }
 
 body.dark-theme .btn-cta-primary:hover {
-  background: var(--gray-200);
+  background: var(--primary-400);
   box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15);
 }
 
@@ -1999,9 +2011,18 @@ body.dark-theme .feature-number {
 }
 
 body.dark-theme .btn.ghost {
-  color: var(--text);
+  color: var(--primary-500);
 }
 
 body.dark-theme .btn.ghost:hover {
   background: var(--bg-alt);
+}
+
+body.dark-theme .btn.ghost.muted {
+  color: var(--muted);
+}
+
+body.dark-theme .btn.ghost.muted:hover {
+  border-color: var(--muted);
+  color: var(--muted);
 }
