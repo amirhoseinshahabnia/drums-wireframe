@@ -36,10 +36,20 @@
   --border: var(--gray-200);
   --bg-alt: var(--gray-50);
   --accent: var(--gray-900);
+
+  /* Attention-grabbing accent color palette (same hue, different lightness) */
+  --accent-attention-400: hsl(340, 85%, 65%);
+  --accent-attention-500: hsl(340, 85%, 55%);
+  --accent-attention-600: hsl(340, 85%, 45%);
+  --accent-attention: var(--accent-attention-500);
 }
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -47,7 +57,9 @@ body {
   font-family: Inter, Helvetica, Arial, sans-serif;
   color: var(--text);
   background: var(--gray-50);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 /* Dark theme */
@@ -58,6 +70,12 @@ body.dark-theme {
   --border: var(--gray-700);
   --bg-alt: var(--gray-900);
   --accent: var(--gray-50);
+
+  /* Attention-grabbing accent color palette (same hue, different lightness for dark theme) */
+  --accent-attention-400: hsl(340, 90%, 75%);
+  --accent-attention-500: hsl(340, 90%, 65%);
+  --accent-attention-600: hsl(340, 90%, 55%);
+  --accent-attention: var(--accent-attention-500);
   background: var(--gray-900);
 }
 
@@ -92,7 +110,9 @@ body.dark-theme .btn-cta-primary:hover {
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
   z-index: 10;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 body.dark-theme .nav {
@@ -127,7 +147,29 @@ body.dark-theme .nav {
   display: flex;
   justify-content: center;
   gap: 16px;
+  margin-bottom: 24px;
+}
+
+.hero-scroll-link {
+  display: inline-block;
   margin-bottom: 48px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--accent-attention-500);
+  text-decoration: none;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+  letter-spacing: 0.2px;
+}
+
+.hero-scroll-link:hover {
+  color: var(--accent-attention-600);
+  transform: translateY(2px);
+}
+
+.hero-scroll-link:active {
+  color: var(--accent-attention-400);
 }
 .btn {
   padding: 14px 28px;
@@ -467,7 +509,9 @@ body.dark-theme .nav {
   background: var(--border);
   border-bottom: 1px dashed var(--border);
   transform: scaleX(0);
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.4s ease;
+  transition:
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.4s ease;
   transform-origin: left;
 }
 
@@ -577,7 +621,9 @@ body.dark-theme .nav {
   flex-shrink: 0;
   font-family: "Inter", sans-serif;
   letter-spacing: -0.03em;
-  transition: opacity 0.3s ease, color 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    color 0.3s ease;
 }
 
 /* Shiny numbers for each card */
@@ -1494,7 +1540,9 @@ body.dark-theme .artwork-placeholder:hover {
   font-size: 24px;
   font-weight: 300;
   color: var(--muted);
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
   flex-shrink: 0;
   margin-left: 16px;
 }
@@ -2085,7 +2133,9 @@ body.dark-theme .genre-image-placeholder {
   border-top: 1px solid var(--border);
   font-size: 14px;
   color: var(--muted);
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .theme-switcher {

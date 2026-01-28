@@ -37,6 +37,8 @@
                     <button class="btn ghost">Try Free</button>
                 </div>
 
+                <a href="#two-playlists" class="hero-scroll-link">Explore Drum Kits ↓</a>
+
                 <div class="image hero-image">
                     Product in Action Placeholder
                 </div>
@@ -79,7 +81,7 @@
         </section>
 
         <!-- NEW SECTION: Two Playlists -->
-        <section class="buy-section">
+        <section id="two-playlists" class="buy-section">
             <div class="container">
                 <!-- Two Playlists: Side by side -->
                 <div class="playlists-grid">
@@ -734,6 +736,22 @@
         setTimeout(() => {
             setInterval(showNextGenre, 3000);
         }, 0);
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    const offsetTop = targetElement.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
     </script>
 
     <footer class="footer">
