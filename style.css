@@ -1436,8 +1436,8 @@ body.dark-theme .artworks-scroll::after {
 
 .artworks-track {
   display: flex;
-  gap: 48px;
-  animation: slideArtworks 40s linear infinite;
+  gap: 64px;
+  animation: slideArtworks 60s linear infinite;
   width: fit-content;
 }
 
@@ -1445,12 +1445,13 @@ body.dark-theme .artworks-scroll::after {
   flex-shrink: 0;
 }
 
-.artwork-placeholder {
+.artwork-image {
   width: 160px;
   height: 160px;
-  background: var(--bg-alt);
   border-radius: 12px;
   border: 1px solid var(--border);
+  object-fit: cover;
+  display: block;
   transition: all 0.3s ease;
 }
 
@@ -1467,12 +1468,11 @@ body.dark-theme .album-artworks {
   background: var(--gray-900);
 }
 
-body.dark-theme .artwork-placeholder {
-  background: var(--bg-alt);
+body.dark-theme .artwork-image {
   border-color: var(--border);
 }
 
-body.dark-theme .artwork-placeholder:hover {
+body.dark-theme .artwork-image:hover {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
