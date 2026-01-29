@@ -858,6 +858,7 @@ body.dark-theme .nav {
 .software-parts-scroll {
   overflow-x: auto;
   overflow-y: hidden;
+  padding-top: 12px;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
   scrollbar-color: var(--border) transparent;
@@ -887,7 +888,7 @@ body.dark-theme .nav {
 
 .software-parts-container {
   display: flex;
-  gap: 32px;
+  gap: 56px;
   align-items: stretch;
   width: max-content;
   padding-right: 24px;
@@ -908,14 +909,10 @@ body.dark-theme .nav {
   height: 280px;
   border: 1px solid var(--border);
   border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--muted);
-  background: var(--bg-alt);
+  object-fit: cover;
+  display: block;
   margin-bottom: 24px;
   flex-shrink: 0;
-  font-size: 14px;
 }
 
 .software-part-title {
@@ -2879,9 +2876,36 @@ body.dark-theme .playlist-ui::after {
 
 body.dark-theme .testimonial,
 body.dark-theme .faq-item,
-body.dark-theme .expansion-pack-card,
-body.dark-theme .software-part-card {
+body.dark-theme .expansion-pack-card {
   background: var(--gray-800);
+}
+
+body.dark-theme .software-part-card {
+  background: linear-gradient(to bottom, var(--gray-800), var(--gray-900));
+  --card-glow-color: var(--shiny-1);
+  box-shadow:
+    0 12px 30px rgba(10, 10, 10, 0.6),
+    0 0 20px color-mix(in srgb, var(--card-glow-color) 35%, transparent);
+}
+
+body.dark-theme .software-part-card:nth-child(5n + 1) {
+  --card-glow-color: var(--shiny-1);
+}
+
+body.dark-theme .software-part-card:nth-child(5n + 2) {
+  --card-glow-color: var(--shiny-2);
+}
+
+body.dark-theme .software-part-card:nth-child(5n + 3) {
+  --card-glow-color: var(--shiny-3);
+}
+
+body.dark-theme .software-part-card:nth-child(5n + 4) {
+  --card-glow-color: var(--shiny-4);
+}
+
+body.dark-theme .software-part-card:nth-child(5n) {
+  --card-glow-color: var(--shiny-5);
 }
 
 body.dark-theme .features,
