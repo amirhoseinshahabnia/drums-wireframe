@@ -641,10 +641,27 @@
 
         <!-- GENRES SECTION -->
         <section class="genres-section">
+            <div class="genres-bg" aria-hidden="true">
+                <img class="genre-bg-image active" src="https://unsplash.com/photos/6yeFZWP9I_Y/download?force=true" alt="" />
+                <img class="genre-bg-image" src="https://unsplash.com/photos/YeUVDKZWSZ4/download?force=true" alt="" />
+                <img class="genre-bg-image" src="https://unsplash.com/photos/x9vo_Z6G8xY/download?force=true" alt="" />
+                <img class="genre-bg-image" src="https://unsplash.com/photos/6-rgE3WSEio/download?force=true" alt="" />
+                <img class="genre-bg-image" src="https://unsplash.com/photos/xP6ngsgxck0/download?force=true" alt="" />
+                <img class="genre-bg-image" src="https://unsplash.com/photos/WZsiyEKBePM/download?force=true" alt="" />
+                <img class="genre-bg-image" src="https://unsplash.com/photos/pUztY7txdYQ/download?force=true" alt="" />
+            </div>
             <div class="container">
                 <div class="genres-content">
                     <div class="genres-image">
-                        <div class="genre-image-placeholder">Genre Image Placeholder</div>
+                        <div class="genre-image-stack">
+                            <img class="genre-image active" src="https://unsplash.com/photos/6yeFZWP9I_Y/download?force=true" alt="Abstract waveforms for Rock" />
+                            <img class="genre-image" src="https://unsplash.com/photos/YeUVDKZWSZ4/download?force=true" alt="Abstract waveforms for Hip-Hop" />
+                            <img class="genre-image" src="https://unsplash.com/photos/x9vo_Z6G8xY/download?force=true" alt="Abstract waveforms for Jazz" />
+                            <img class="genre-image" src="https://unsplash.com/photos/6-rgE3WSEio/download?force=true" alt="Abstract waveforms for Metal" />
+                            <img class="genre-image" src="https://unsplash.com/photos/xP6ngsgxck0/download?force=true" alt="Abstract waveforms for Pop" />
+                            <img class="genre-image" src="https://unsplash.com/photos/WZsiyEKBePM/download?force=true" alt="Abstract waveforms for Electronic" />
+                            <img class="genre-image" src="https://unsplash.com/photos/pUztY7txdYQ/download?force=true" alt="Abstract waveforms for Country" />
+                        </div>
                     </div>
                     <div class="genres-text">
                         <h2 class="section-title">Used by Producers in <span class="genre-slider"><span
@@ -803,17 +820,37 @@
 
         // Genre slider functionality
         const genreWords = document.querySelectorAll('.genre-word');
+        const genreImages = document.querySelectorAll('.genre-image');
+        const genreBgImages = document.querySelectorAll('.genre-bg-image');
         let currentGenre = 0;
 
         function showNextGenre() {
             genreWords[currentGenre].classList.remove('active');
+            if (genreImages[currentGenre]) {
+                genreImages[currentGenre].classList.remove('active');
+            }
+            if (genreBgImages[currentGenre]) {
+                genreBgImages[currentGenre].classList.remove('active');
+            }
             currentGenre = (currentGenre + 1) % genreWords.length;
             genreWords[currentGenre].classList.add('active');
+            if (genreImages[currentGenre]) {
+                genreImages[currentGenre].classList.add('active');
+            }
+            if (genreBgImages[currentGenre]) {
+                genreBgImages[currentGenre].classList.add('active');
+            }
         }
 
         // Set initial active genre
         if (genreWords.length > 0) {
             genreWords[0].classList.add('active');
+        }
+        if (genreImages.length > 0) {
+            genreImages[0].classList.add('active');
+        }
+        if (genreBgImages.length > 0) {
+            genreBgImages[0].classList.add('active');
         }
 
         // Start genre animation
