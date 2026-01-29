@@ -1494,10 +1494,11 @@ body.dark-theme .artwork-placeholder:hover {
   background:
     linear-gradient(
       180deg,
-      hsla(255, 40%, 8%, 0.96) 0%,
-      hsla(255, 40%, 6%, 0.64) 100%
+      hsla(255, 40%, 8%, 1) 0%,
+      hsla(255, 40%, 6%, 0.4) 50%,
+      hsla(255, 40%, 8%, 1) 100%
     ),
-    url(/purple.jpg);
+    url(https://unsplash.com/photos/aAC5RQ25iqY/download?force=true);
   background-size: cover;
   background-position: center;
   position: relative;
