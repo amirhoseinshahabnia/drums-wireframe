@@ -334,6 +334,36 @@ body.dark-theme .nav {
   }
 }
 
+@keyframes accent-flow {
+  0% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 50% 200%;
+  }
+}
+
+@keyframes accent-shine {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scaleY(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .showcase-accent {
+    animation: none;
+  }
+  .showcase-accent::after {
+    animation: none;
+  }
+}
+
 /* HIGHLIGHTS */
 .highlights {
   border-top: 1px solid var(--border);
@@ -1835,7 +1865,8 @@ body.dark-theme .artwork-image:hover {
   }
 
   .showcase-text-container {
-    height: 400px;
+    height: auto;
+    min-height: 400px;
   }
 
   .showcase-title {
@@ -1893,7 +1924,8 @@ body.dark-theme .artwork-image:hover {
   }
 
   .showcase-text-container {
-    height: 350px;
+    height: auto;
+    min-height: 350px;
   }
 
   .showcase-title {
@@ -2359,11 +2391,23 @@ body.dark-theme .artwork-image:hover {
   padding: 120px 0;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.artist-showcase::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  pointer-events: none;
+  mix-blend-mode: multiply;
 }
 
 .showcase-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) 2px minmax(0, 1fr);
   gap: 80px;
   align-items: center;
   max-width: 1000px;
@@ -2376,6 +2420,54 @@ body.dark-theme .artwork-image:hover {
   height: 500px;
   overflow: hidden;
   border-radius: 16px;
+}
+
+.showcase-accent {
+  width: 2px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    180deg,
+    var(--primary-500) 0%,
+    var(--genre-rock) 16%,
+    var(--genre-hiphop) 32%,
+    var(--genre-electronic) 48%,
+    var(--accent-attention-500) 64%,
+    var(--primary-500) 80%,
+    var(--primary-500) 100%
+  );
+  justify-self: center;
+  align-self: stretch;
+  opacity: 0.55;
+  transform: scaleY(0) translateY(-12%) translate3d(0px, 0px, 0px);
+  transform-origin: top;
+  transition: transform 1.4s ease;
+  background-size: 100% 200%;
+  background-position: 50% 0%;
+  animation: accent-flow 10s linear infinite;
+  will-change: background-position, transform;
+  box-shadow:
+    0 0 14px color-mix(in srgb, var(--primary-500) 85%, transparent),
+    0 0 26px color-mix(in srgb, var(--genre-hiphop) 85%, transparent),
+    0 0 38px color-mix(in srgb, var(--accent-attention-500) 85%, transparent);
+}
+
+.showcase-accent::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  filter: blur(6px);
+  opacity: 0.6;
+  animation: accent-shine 4.5s ease-in-out infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.showcase-accent::before {
+  content: none;
+}
+
+.showcase-accent.is-animating {
+  transform: scaleY(1) translateY(0);
 }
 
 .showcase-image-track {
@@ -2396,23 +2488,76 @@ body.dark-theme .artwork-image:hover {
   width: 100%;
   height: 500px;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transform: translateX(14px);
+  transition:
+    opacity 0.9s ease,
+    transform 1.2s ease;
+  animation: none;
 }
 
 .showcase-image:nth-child(1) {
-  animation: fadeImage1 18s ease-in-out infinite;
+  animation: none;
 }
 
 .showcase-image:nth-child(2) {
-  animation: fadeImage2 18s ease-in-out infinite;
+  animation: none;
 }
 
 .showcase-image:nth-child(3) {
-  animation: fadeImage3 18s ease-in-out infinite;
+  animation: none;
 }
 
 .showcase-image:nth-child(4) {
   display: none;
+}
+
+.showcase-image.is-active {
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 1;
+}
+
+.showcase-image.is-exiting {
+  opacity: 0;
+  transform: translateX(-14px);
+  z-index: 0;
+}
+
+.showcase-image .artist-photo {
+  --scroll-shift: 0px;
+  transform: translateY(calc(var(--scroll-shift) - 12px)) scale(1.05);
+  transition: transform 1.4s ease-out;
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.85) 12%,
+    #000 30%,
+    #000 70%,
+    rgba(0, 0, 0, 0.85) 88%,
+    transparent 100%
+  );
+  mask-size: 200% 100%;
+  mask-position: 100% 0;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.85) 12%,
+    #000 30%,
+    #000 70%,
+    rgba(0, 0, 0, 0.85) 88%,
+    transparent 100%
+  );
+  -webkit-mask-size: 200% 100%;
+  -webkit-mask-position: 100% 0;
+  transition:
+    transform 1.4s ease-out,
+    mask-position 1.4s ease;
+}
+
+.showcase-image.is-active .artist-photo {
+  transform: translateY(var(--scroll-shift)) scale(1);
+  mask-image: none;
+  -webkit-mask-image: none;
 }
 
 .artist-photo-placeholder {
@@ -2427,6 +2572,15 @@ body.dark-theme .artwork-image:hover {
   color: var(--muted);
   font-size: 14px;
   transition: all 0.3s ease;
+}
+
+.artist-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  display: block;
 }
 
 @keyframes fadeImage1 {
@@ -2490,21 +2644,20 @@ body.dark-theme .artwork-image:hover {
   flex-direction: column;
   gap: 32px;
   position: relative;
-  height: 500px;
+  height: auto;
+  min-height: 500px;
 }
 
 .showcase-quotes {
   position: relative;
   flex: 1;
-  display: flex;
+  display: grid;
   align-items: center;
 }
 
 .showcase-quote {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  position: relative;
+  grid-area: 1 / 1;
   margin: 0;
   padding: 0;
   border: none;
@@ -2513,6 +2666,7 @@ body.dark-theme .artwork-image:hover {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  align-self: center;
 }
 
 .showcase-quote.active {
@@ -2524,7 +2678,7 @@ body.dark-theme .artwork-image:hover {
 }
 
 .showcase-title {
-  font-size: 42px;
+  font-size: 36px;
   font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 1.4;

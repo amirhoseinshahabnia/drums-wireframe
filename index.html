@@ -503,17 +503,24 @@
                     <div class="showcase-image-container">
                         <div class="showcase-image-track">
                             <div class="showcase-image">
-                                <div class="artist-photo-placeholder">Artist Photo Placeholder 1</div>
+                                <img class="artist-photo"
+                                    src="https://images.unsplash.com/photo-1657042855066-7f09c6c2c350?auto=format&fit=crop&w=1200&q=80"
+                                    alt="Hip hop portrait wearing a hat">
                             </div>
                             <div class="showcase-image">
-                                <div class="artist-photo-placeholder">Artist Photo Placeholder 2</div>
+                                <img class="artist-photo"
+                                    src="https://images.unsplash.com/photo-1601643157091-ce5c665179ab?auto=format&fit=crop&w=1200&q=80"
+                                    alt="Hip hop artist in street lighting">
                             </div>
                             <div class="showcase-image">
-                                <div class="artist-photo-placeholder">Artist Photo Placeholder 3</div>
+                                <img class="artist-photo"
+                                    src="https://images.unsplash.com/photo-1682534434080-404a5edda2f3?auto=format&fit=crop&w=1200&q=80"
+                                    alt="Hip hop performer portrait">
                             </div>
 
                         </div>
                     </div>
+                    <div class="showcase-accent" aria-hidden="true"></div>
                     <div class="showcase-text-container">
                         <div class="showcase-quotes">
                             <blockquote class="showcase-quote active">
@@ -862,18 +869,74 @@
     <script>
         // Showcase slider functionality
         const quotes = document.querySelectorAll('.showcase-quote');
+        const showcaseImages = document.querySelectorAll('.showcase-image');
+        const showcaseAccent = document.querySelector('.showcase-accent');
         let currentQuote = 0;
 
         function showNextQuote() {
             quotes[currentQuote].classList.remove('active');
+            if (showcaseImages[currentQuote]) {
+                showcaseImages[currentQuote].classList.remove('is-active');
+                showcaseImages[currentQuote].classList.add('is-exiting');
+            }
             currentQuote = (currentQuote + 1) % quotes.length;
             quotes[currentQuote].classList.add('active');
+            if (showcaseImages[currentQuote]) {
+                showcaseImages[currentQuote].classList.remove('is-exiting');
+                showcaseImages[currentQuote].classList.add('is-active');
+            }
+            if (showcaseAccent) {
+                showcaseAccent.classList.remove('is-animating');
+                void showcaseAccent.offsetWidth;
+                showcaseAccent.classList.add('is-animating');
+            }
         }
 
         // Start animation after initial delay
+        if (showcaseImages.length > 0) {
+            showcaseImages[0].classList.add('is-active');
+        }
+        if (showcaseAccent) {
+            showcaseAccent.classList.add('is-animating');
+        }
+
         setTimeout(() => {
             setInterval(showNextQuote, 6000);
         }, 0);
+
+        // Scroll-controlled image shift for showcase
+        const artistShowcase = document.querySelector('.artist-showcase');
+        let showcaseTicking = false;
+
+        function updateShowcaseShift() {
+            if (!artistShowcase) {
+                return;
+            }
+            const activeImage = document.querySelector('.showcase-image.is-active .artist-photo');
+            if (!activeImage) {
+                return;
+            }
+            const rect = artistShowcase.getBoundingClientRect();
+            const viewHeight = window.innerHeight || document.documentElement.clientHeight;
+            const progress = Math.min(Math.max((viewHeight - rect.top) / (viewHeight + rect.height), 0), 1);
+            const shift = (0.5 - progress) * 90;
+            activeImage.style.setProperty('--scroll-shift', `${shift.toFixed(2)}px`);
+        }
+
+        function onShowcaseScroll() {
+            if (showcaseTicking) {
+                return;
+            }
+            showcaseTicking = true;
+            window.requestAnimationFrame(() => {
+                updateShowcaseShift();
+                showcaseTicking = false;
+            });
+        }
+
+        updateShowcaseShift();
+        window.addEventListener('scroll', onShowcaseScroll, { passive: true });
+        window.addEventListener('resize', updateShowcaseShift);
 
         // Genre slider functionality
         const genreWords = document.querySelectorAll('.genre-word');
