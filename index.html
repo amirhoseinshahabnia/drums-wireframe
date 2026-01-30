@@ -61,23 +61,98 @@
         <!-- FEATURE IMAGES + PLAYLIST -->
         <section class="feature-images-playlist">
             <div class="container">
-                <h2 class="section-title center">See It in Action</h2>
+                <h2 class="section-title">See what is possible with SSD?</h2>
 
-                <!-- Workflow Images: Full width, half & half -->
-                <div class="workflow-images">
-                    <div class="image">Animated GrooveAI Workflow</div>
-                    <div class="image">Animated Kit Browser Workflow</div>
-                </div>
+                <div class="feature-demo">
+                    <div class="feature-demo-panels">
+                        <div class="feature-demo-tabs" role="tablist" aria-label="SSD feature demos">
+                            <button class="feature-demo-tab is-active" data-target="demo-1" role="tab"
+                                aria-selected="true">
+                                <span class="feature-demo-title">Sample & Slice</span>
+                                <span class="feature-demo-subtitle">Chop loops into playable hits, build textures fast,
+                                    and remix grooves without losing feel.</span>
+                                <span class="feature-demo-icon" aria-hidden="true">+</span>
+                            </button>
+                            <button class="feature-demo-tab" data-target="demo-2" role="tab" aria-selected="false">
+                                <span class="feature-demo-title">Play Expressively</span>
+                                <span class="feature-demo-subtitle">Velocity layers, humanization, and nuanced
+                                    articulations keep every performance alive.</span>
+                                <span class="feature-demo-icon" aria-hidden="true">+</span>
+                            </button>
+                            <button class="feature-demo-tab" data-target="demo-3" role="tab" aria-selected="false">
+                                <span class="feature-demo-title">Control & Record</span>
+                                <span class="feature-demo-subtitle">Capture takes quickly with tight MIDI control,
+                                    quantize options, and instant routing.</span>
+                                <span class="feature-demo-icon" aria-hidden="true">+</span>
+                            </button>
+                            <button class="feature-demo-tab" data-target="demo-4" role="tab" aria-selected="false">
+                                <span class="feature-demo-title">Shape & Mix</span>
+                                <span class="feature-demo-subtitle">Dial in tone with studio tools, sculpt transients,
+                                    and polish mixes in seconds.</span>
+                                <span class="feature-demo-icon" aria-hidden="true">+</span>
+                            </button>
+                        </div>
 
-                <!-- CTA Text and Button -->
-                <div class="cta-content">
-                    <p class="centered-body">
-                        Experience the power of professional drum production with SSD5.
-                        Get access to legendary drum kits, intelligent grooves, and a workflow
-                        that transforms your music production.
-                    </p>
-                    <div class="cta-row">
-                        <button class="btn primary">Buy SSD</button>
+                        <div class="feature-demo-panel is-active" id="demo-1" role="tabpanel">
+                            <div class="feature-demo-media">
+                                <img src="/images/hero.webp" alt="Sample and slice demo">
+                                <span class="feature-demo-label">Sample & Slice</span>
+                                <div class="feature-demo-controls">
+                                    <span class="feature-demo-play">▶</span>
+                                    <span class="feature-demo-mute" aria-label="Mute">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="M4 9h4l5-4v14l-5-4H4V9z" fill="currentColor"/>
+                                            <path d="M16 9l4 4m0-4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-demo-panel" id="demo-2" role="tabpanel">
+                            <div class="feature-demo-media">
+                                <img src="/images/hero.webp" alt="Expressive play demo">
+                                <span class="feature-demo-label">Play Expressively</span>
+                                <div class="feature-demo-controls">
+                                    <span class="feature-demo-play">▶</span>
+                                    <span class="feature-demo-mute" aria-label="Mute">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="M4 9h4l5-4v14l-5-4H4V9z" fill="currentColor"/>
+                                            <path d="M16 9l4 4m0-4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-demo-panel" id="demo-3" role="tabpanel">
+                            <div class="feature-demo-media">
+                                <img src="/images/hero.webp" alt="Control and record demo">
+                                <span class="feature-demo-label">Control & Record</span>
+                                <div class="feature-demo-controls">
+                                    <span class="feature-demo-play">▶</span>
+                                    <span class="feature-demo-mute" aria-label="Mute">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="M4 9h4l5-4v14l-5-4H4V9z" fill="currentColor"/>
+                                            <path d="M16 9l4 4m0-4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-demo-panel" id="demo-4" role="tabpanel">
+                            <div class="feature-demo-media">
+                                <img src="/images/hero.webp" alt="Shape and mix demo">
+                                <span class="feature-demo-label">Shape & Mix</span>
+                                <div class="feature-demo-controls">
+                                    <span class="feature-demo-play">▶</span>
+                                    <span class="feature-demo-mute" aria-label="Mute">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="M4 9h4l5-4v14l-5-4H4V9z" fill="currentColor"/>
+                                            <path d="M16 9l4 4m0-4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -998,6 +1073,38 @@
                     setActiveTrack(track);
                 });
             }
+        });
+
+        // Feature demo tabs
+        const demoTabs = document.querySelectorAll('.feature-demo-tab');
+        const demoPanels = document.querySelectorAll('.feature-demo-panel');
+
+        function setActiveDemo(targetId) {
+            demoTabs.forEach(tab => {
+                const isActive = tab.dataset.target === targetId;
+                tab.classList.toggle('is-active', isActive);
+                tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+            });
+            demoPanels.forEach(panel => {
+                if (panel.id === targetId) {
+                    panel.classList.remove('is-exiting');
+                    panel.classList.add('is-active');
+                } else if (panel.classList.contains('is-active')) {
+                    panel.classList.remove('is-active');
+                    panel.classList.add('is-exiting');
+                    setTimeout(() => {
+                        panel.classList.remove('is-exiting');
+                    }, 1300);
+                } else {
+                    panel.classList.remove('is-exiting');
+                }
+            });
+        }
+
+        demoTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                setActiveDemo(tab.dataset.target);
+            });
         });
 
         // Smooth scroll for anchor links
