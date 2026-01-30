@@ -322,7 +322,7 @@ body.dark-theme .nav {
   z-index: -2;
   inset: 16px;
   background: conic-gradient(from var(--glow-deg), var(--gradient-glow));
-  filter: blur(var(--glow-size, 4rem));
+  filter: blur(var(--glow-size, 3rem));
   opacity: 0.3;
   border-radius: inherit;
   transform: translate3d(0px, 0px, 0px);
