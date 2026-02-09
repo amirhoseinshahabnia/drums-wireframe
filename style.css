@@ -4037,6 +4037,19 @@ body.dark-theme .genre-image-stack {
   color: var(--muted);
 }
 
+.free-video {
+  max-width: 100%;
+  margin: 24px auto 32px;
+}
+
+.free-video-thumb {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+  aspect-ratio: 4 / 1.6;
+  object-fit: cover;
+}
+
 /* FOOTER */
 .footer {
   padding: 48px 0;
