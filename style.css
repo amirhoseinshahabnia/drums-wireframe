@@ -2212,10 +2212,6 @@ body.dark-theme .artwork-image:hover {
     padding: 80px 0;
   }
 
-  .expansion-packs .section-title {
-    margin-bottom: 40px;
-  }
-
   .expansion-pack-card {
     flex: 0 0 240px;
     padding: 20px;
@@ -2380,10 +2376,6 @@ body.dark-theme .artwork-image:hover {
   padding: 64px 0;
 }
 
-.expansion-packs .section-title {
-  margin-bottom: 32px;
-}
-
 .expansion-pack-card {
   flex: 0 0 220px;
   padding: 18px;
@@ -2446,8 +2438,29 @@ body.dark-theme .artwork-image:hover {
   border-top: 1px solid var(--border);
 }
 
-.expansion-packs .section-title {
-  margin-bottom: 48px;
+.expansion-packs-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 56px;
+}
+
+.expansion-packs-subtitle {
+  margin: 12px auto 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.expansion-packs-quote {
+  margin: 16px auto 0;
+  font-style: italic;
+  color: var(--gray-400);
+}
+
+.expansion-packs-grid {
+  display: grid;
+  gap: 28px;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 .expansion-packs .container {
