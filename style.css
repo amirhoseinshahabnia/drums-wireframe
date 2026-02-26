@@ -926,6 +926,7 @@ body.dark-theme .nav {
 
 /* Playlist UI: Premium with noise overlay */
 .playlist-ui {
+  --playlist-track-height: 52px;
   display: flex;
   flex-direction: column;
   background: linear-gradient(
@@ -991,28 +992,59 @@ body.dark-theme .nav {
     inset 0 1px 0 hsla(0, 0%, 100%, 0.7);
 }
 
+/* 6 tracks visible; track height kept in sync with .track min-height */
 .playlist {
   display: flex;
   flex-direction: column;
   gap: 0;
-  flex-grow: 1;
-  overflow-y: auto;
+  max-height: calc(6 * var(--playlist-track-height));
+  overflow-y: scroll; /* always show scrollbar */
+  overflow-x: hidden;
   position: relative;
   z-index: 3;
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
+  scrollbar-color: hsla(0, 0%, 60%, 0.5) transparent;
+}
+
+/* Playlist scrollbar - WebKit (Chrome, Safari, Edge) */
+.playlist::-webkit-scrollbar {
+  width: 10px;
+}
+
+.playlist::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 14px 0; /* shorter scrollbar (inset from top/bottom) */
+}
+
+.playlist::-webkit-scrollbar-thumb {
+  background: hsla(0, 0%, 60%, 0.5);
+  border-radius: 5px;
+}
+
+.playlist::-webkit-scrollbar-thumb:hover {
+  background: hsla(0, 0%, 50%, 0.6);
+}
+
+.playlist::-webkit-scrollbar-thumb:active {
+  background: hsla(0, 0%, 45%, 0.7);
 }
 
 .track {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: transparent;
+  min-height: var(--playlist-track-height, 52px);
   padding: 14px 16px;
+  box-sizing: border-box;
+  background: transparent;
   cursor: pointer;
   transition: all 0.25s ease;
   border-bottom: 1px solid var(--border);
   border-radius: 0;
   position: relative;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .track:last-child {
@@ -4384,6 +4416,18 @@ body.dark-theme .playlist-ui::after {
     hsla(0, 0%, 100%, 0.22),
     hsla(0, 0%, 20%, 0.12)
   );
+}
+
+body.dark-theme .playlist {
+  scrollbar-color: hsla(0, 0%, 70%, 0.35) transparent;
+}
+
+body.dark-theme .playlist::-webkit-scrollbar-thumb {
+  background: hsla(0, 0%, 70%, 0.35);
+}
+
+body.dark-theme .playlist::-webkit-scrollbar-thumb:hover {
+  background: hsla(0, 0%, 75%, 0.45);
 }
 
 body.dark-theme .testimonial,
