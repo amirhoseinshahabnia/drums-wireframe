@@ -1279,50 +1279,418 @@
             </div>
         </section>
 
+        <!-- Genre listen: one row per genre (thumb, title, subtitle, genre tag, play, length) -->
+        <section class="genre-listen-section" aria-labelledby="genre-listen-heading">
+            <div class="container">
+                <div class="expansion-packs-header genre-listen-header">
+                    <h2 id="genre-listen-heading" class="section-title text-h2">Hear SSD in every genre</h2>
+                    <p class="expansion-packs-subtitle">Skip around, dial in the feel, and let each hook sell the
+                        groove—SSD 5 doesn't just list genres; it lets you taste them before you commit.</p>
+                </div>
+                <div class="genre-demo-panel">
+                    <div class="genre-demo-row track genre-rock">
+                        <div class="genre-demo-thumb-wrap">
+                            <img class="genre-demo-thumb"
+                                src="https://unsplash.com/photos/6yeFZWP9I_Y/download?force=true" alt="">
+                        </div>
+                        <div class="genre-demo-main">
+                            <div class="genre-demo-copy">
+                                <p class="genre-demo-hook">Make the chorus hit like the roof just opened</p>
+                                <p class="genre-demo-subtitle">Big-room power, immortal hooks</p>
+                            </div>
+                            <span class="genre-demo-genre-badge">Rock</span>
+                        </div>
+                        <div class="genre-demo-play-slot">
+                            <button type="button" class="play-btn" aria-label="Play Rock demo">
+                                <span class="play-icon">▶</span>
+                                <span class="play-bars" aria-hidden="true">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="genre-demo-progress-cluster">
+                            <span class="genre-demo-time genre-demo-time-elapsed">0:00</span>
+                            <div class="genre-demo-progress-bar-wrap" role="slider" tabindex="0"
+                                aria-label="Seek Rock demo" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                <div class="genre-demo-progress-bg"></div>
+                                <div class="genre-demo-progress-fill"></div>
+                            </div>
+                            <span class="genre-demo-time genre-demo-time-total">—:—</span>
+                        </div>
+                        <audio preload="metadata"
+                            src="https://cdn.pixabay.com/audio/2026/04/13/audio_954e84095c.mp3"></audio>
+                    </div>
+                    <div class="genre-demo-row track genre-hiphop">
+                        <div class="genre-demo-thumb-wrap">
+                            <img class="genre-demo-thumb"
+                                src="https://unsplash.com/photos/YeUVDKZWSZ4/download?force=true" alt="">
+                        </div>
+                        <div class="genre-demo-main">
+                            <div class="genre-demo-copy">
+                                <p class="genre-demo-hook">Grooves built for speakers, subs, and soul</p>
+                                <p class="genre-demo-subtitle">Cut-through transients, lows that hug the mix</p>
+                            </div>
+                            <span class="genre-demo-genre-badge">Hip-Hop</span>
+                        </div>
+                        <div class="genre-demo-play-slot">
+                            <button type="button" class="play-btn" aria-label="Play Hip-Hop demo">
+                                <span class="play-icon">▶</span>
+                                <span class="play-bars" aria-hidden="true">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="genre-demo-progress-cluster">
+                            <span class="genre-demo-time genre-demo-time-elapsed">0:00</span>
+                            <div class="genre-demo-progress-bar-wrap" role="slider" tabindex="0"
+                                aria-label="Seek Hip-Hop demo" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                <div class="genre-demo-progress-bg"></div>
+                                <div class="genre-demo-progress-fill"></div>
+                            </div>
+                            <span class="genre-demo-time genre-demo-time-total">—:—</span>
+                        </div>
+                        <audio preload="metadata"
+                            src="https://cdn.pixabay.com/audio/2026/04/13/audio_954e84095c.mp3"></audio>
+                    </div>
+                    <div class="genre-demo-row track genre-jazz">
+                        <div class="genre-demo-thumb-wrap">
+                            <img class="genre-demo-thumb"
+                                src="https://unsplash.com/photos/x9vo_Z6G8xY/download?force=true" alt="">
+                        </div>
+                        <div class="genre-demo-main">
+                            <div class="genre-demo-copy">
+                                <p class="genre-demo-hook">Where every ghost note tells a story</p>
+                                <p class="genre-demo-subtitle">Brushes, swing, air around the shells</p>
+                            </div>
+                            <span class="genre-demo-genre-badge">Jazz</span>
+                        </div>
+                        <div class="genre-demo-play-slot">
+                            <button type="button" class="play-btn" aria-label="Play Jazz demo">
+                                <span class="play-icon">▶</span>
+                                <span class="play-bars" aria-hidden="true">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="genre-demo-progress-cluster">
+                            <span class="genre-demo-time genre-demo-time-elapsed">0:00</span>
+                            <div class="genre-demo-progress-bar-wrap" role="slider" tabindex="0"
+                                aria-label="Seek Jazz demo" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                <div class="genre-demo-progress-bg"></div>
+                                <div class="genre-demo-progress-fill"></div>
+                            </div>
+                            <span class="genre-demo-time genre-demo-time-total">—:—</span>
+                        </div>
+                        <audio preload="metadata"
+                            src="https://cdn.pixabay.com/audio/2026/04/13/audio_954e84095c.mp3"></audio>
+                    </div>
+                    <div class="genre-demo-row track genre-metal">
+                        <div class="genre-demo-thumb-wrap">
+                            <img class="genre-demo-thumb"
+                                src="https://unsplash.com/photos/6-rgE3WSEio/download?force=true" alt="">
+                        </div>
+                        <div class="genre-demo-main">
+                            <div class="genre-demo-copy">
+                                <p class="genre-demo-hook">Precision chaos—fast, heavy, unmistakable</p>
+                                <p class="genre-demo-subtitle">Attack you can dial in, lows you can trust</p>
+                            </div>
+                            <span class="genre-demo-genre-badge">Metal</span>
+                        </div>
+                        <div class="genre-demo-play-slot">
+                            <button type="button" class="play-btn" aria-label="Play Metal demo">
+                                <span class="play-icon">▶</span>
+                                <span class="play-bars" aria-hidden="true">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="genre-demo-progress-cluster">
+                            <span class="genre-demo-time genre-demo-time-elapsed">0:00</span>
+                            <div class="genre-demo-progress-bar-wrap" role="slider" tabindex="0"
+                                aria-label="Seek Metal demo" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                <div class="genre-demo-progress-bg"></div>
+                                <div class="genre-demo-progress-fill"></div>
+                            </div>
+                            <span class="genre-demo-time genre-demo-time-total">—:—</span>
+                        </div>
+                        <audio preload="metadata"
+                            src="https://cdn.pixabay.com/audio/2026/04/13/audio_954e84095c.mp3"></audio>
+                    </div>
+                    <div class="genre-demo-row track genre-pop">
+                        <div class="genre-demo-thumb-wrap">
+                            <img class="genre-demo-thumb"
+                                src="https://unsplash.com/photos/xP6ngsgxck0/download?force=true" alt="">
+                        </div>
+                        <div class="genre-demo-main">
+                            <div class="genre-demo-copy">
+                                <p class="genre-demo-hook">Drums that lift the vocal and own the hook</p>
+                                <p class="genre-demo-subtitle">Polished, present, instantly memorable</p>
+                            </div>
+                            <span class="genre-demo-genre-badge">Pop</span>
+                        </div>
+                        <div class="genre-demo-play-slot">
+                            <button type="button" class="play-btn" aria-label="Play Pop demo">
+                                <span class="play-icon">▶</span>
+                                <span class="play-bars" aria-hidden="true">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="genre-demo-progress-cluster">
+                            <span class="genre-demo-time genre-demo-time-elapsed">0:00</span>
+                            <div class="genre-demo-progress-bar-wrap" role="slider" tabindex="0"
+                                aria-label="Seek Pop demo" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                <div class="genre-demo-progress-bg"></div>
+                                <div class="genre-demo-progress-fill"></div>
+                            </div>
+                            <span class="genre-demo-time genre-demo-time-total">—:—</span>
+                        </div>
+                        <audio preload="metadata"
+                            src="https://cdn.pixabay.com/audio/2026/04/13/audio_954e84095c.mp3"></audio>
+                    </div>
+                    <div class="genre-demo-row track genre-electronic">
+                        <div class="genre-demo-thumb-wrap">
+                            <img class="genre-demo-thumb"
+                                src="https://unsplash.com/photos/WZsiyEKBePM/download?force=true" alt="">
+                        </div>
+                        <div class="genre-demo-main">
+                            <div class="genre-demo-copy">
+                                <p class="genre-demo-hook">Pulse and lift for the floor and the finale</p>
+                                <p class="genre-demo-subtitle">Drive, clarity, hybrid energy that glues</p>
+                            </div>
+                            <span class="genre-demo-genre-badge">Electronic</span>
+                        </div>
+                        <div class="genre-demo-play-slot">
+                            <button type="button" class="play-btn" aria-label="Play Electronic demo">
+                                <span class="play-icon">▶</span>
+                                <span class="play-bars" aria-hidden="true">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="genre-demo-progress-cluster">
+                            <span class="genre-demo-time genre-demo-time-elapsed">0:00</span>
+                            <div class="genre-demo-progress-bar-wrap" role="slider" tabindex="0"
+                                aria-label="Seek Electronic demo" aria-valuemin="0" aria-valuemax="100"
+                                aria-valuenow="0">
+                                <div class="genre-demo-progress-bg"></div>
+                                <div class="genre-demo-progress-fill"></div>
+                            </div>
+                            <span class="genre-demo-time genre-demo-time-total">—:—</span>
+                        </div>
+                        <audio preload="metadata"
+                            src="https://cdn.pixabay.com/audio/2026/04/13/audio_954e84095c.mp3"></audio>
+                    </div>
+                    <div class="genre-demo-row track genre-country">
+                        <div class="genre-demo-thumb-wrap">
+                            <img class="genre-demo-thumb"
+                                src="https://unsplash.com/photos/pUztY7txdYQ/download?force=true" alt="">
+                        </div>
+                        <div class="genre-demo-main">
+                            <div class="genre-demo-copy">
+                                <p class="genre-demo-hook">Heartland drive with room to breathe</p>
+                                <p class="genre-demo-subtitle">Snap, twang, live-room soul</p>
+                            </div>
+                            <span class="genre-demo-genre-badge">Country</span>
+                        </div>
+                        <div class="genre-demo-play-slot">
+                            <button type="button" class="play-btn" aria-label="Play Country demo">
+                                <span class="play-icon">▶</span>
+                                <span class="play-bars" aria-hidden="true">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="genre-demo-progress-cluster">
+                            <span class="genre-demo-time genre-demo-time-elapsed">0:00</span>
+                            <div class="genre-demo-progress-bar-wrap" role="slider" tabindex="0"
+                                aria-label="Seek Country demo" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                <div class="genre-demo-progress-bg"></div>
+                                <div class="genre-demo-progress-fill"></div>
+                            </div>
+                            <span class="genre-demo-time genre-demo-time-total">—:—</span>
+                        </div>
+                        <audio preload="metadata"
+                            src="https://cdn.pixabay.com/audio/2026/04/13/audio_954e84095c.mp3"></audio>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <script>
 
 
-        // Genre slider functionality
-        const genreWords = document.querySelectorAll('.genre-word');
-        const genreImages = document.querySelectorAll('.genre-image');
-        const genreBgImages = document.querySelectorAll('.genre-bg-image');
-        let currentGenre = 0;
+        // Genres section: rotating headline + stacked imagery
+        const genreWords = document.querySelectorAll('.genres-section .genre-word');
+        const genreDemoRows = document.querySelectorAll('.genre-listen-section .genre-demo-row');
+        const genreImages = document.querySelectorAll('.genres-section .genre-image');
+        const genreBgImages = document.querySelectorAll('.genres-section .genre-bg-image');
 
-        function showNextGenre() {
-            genreWords[currentGenre].classList.remove('active');
-            if (genreImages[currentGenre]) {
-                genreImages[currentGenre].classList.remove('active');
-            }
-            if (genreBgImages[currentGenre]) {
-                genreBgImages[currentGenre].classList.remove('active');
-            }
-            currentGenre = (currentGenre + 1) % genreWords.length;
-            genreWords[currentGenre].classList.add('active');
-            if (genreImages[currentGenre]) {
-                genreImages[currentGenre].classList.add('active');
-            }
-            if (genreBgImages[currentGenre]) {
-                genreBgImages[currentGenre].classList.add('active');
-            }
+        let activeGenreIndex = 0;
+
+        function applyGenreVisual(index) {
+            const count = Math.max(
+                genreWords.length,
+                genreImages.length,
+                genreBgImages.length,
+                1
+            );
+            activeGenreIndex = ((index % count) + count) % count;
+            genreWords.forEach((el, i) => el.classList.toggle('active', i === activeGenreIndex));
+            genreImages.forEach((img, i) => img.classList.toggle('active', i === activeGenreIndex));
+            genreBgImages.forEach((img, i) => img.classList.toggle('active', i === activeGenreIndex));
         }
 
-        // Set initial active genre
-        if (genreWords.length > 0) {
-            genreWords[0].classList.add('active');
-        }
-        if (genreImages.length > 0) {
-            genreImages[0].classList.add('active');
-        }
-        if (genreBgImages.length > 0) {
-            genreBgImages[0].classList.add('active');
+        function pauseOtherGenreAudios(current) {
+            genreDemoRows.forEach(row => {
+                const a = row.querySelector('audio');
+                if (a && a !== current && !a.paused) {
+                    a.pause();
+                }
+            });
         }
 
-        // Start genre animation
-        setTimeout(() => {
-            setInterval(showNextGenre, 3000);
-        }, 0);
+        function formatDuration(seconds) {
+            if (!Number.isFinite(seconds)) {
+                return '—:—';
+            }
+            const m = Math.floor(seconds / 60);
+            const s = Math.floor(seconds % 60);
+            return `${m}:${s.toString().padStart(2, '0')}`;
+        }
+
+        function bindGenreListenRow(row) {
+            const audio = row.querySelector('audio');
+            const btn = row.querySelector('.play-btn');
+            const elapsedEl = row.querySelector('.genre-demo-time-elapsed');
+            const totalEl = row.querySelector('.genre-demo-time-total');
+            const fillEl = row.querySelector('.genre-demo-progress-fill');
+            const barWrap = row.querySelector('.genre-demo-progress-bar-wrap');
+
+            if (!audio || !elapsedEl || !totalEl || !fillEl || !barWrap) {
+                return;
+            }
+
+            function pctFromAudio() {
+                if (!audio.duration || !Number.isFinite(audio.duration)) {
+                    return 0;
+                }
+                return Math.min(100, Math.max(0, (audio.currentTime / audio.duration) * 100));
+            }
+
+            function updateProgressUi() {
+                fillEl.style.width = `${pctFromAudio()}%`;
+                elapsedEl.textContent = formatDuration(audio.currentTime);
+                if (audio.duration && Number.isFinite(audio.duration)) {
+                    totalEl.textContent = formatDuration(audio.duration);
+                }
+                barWrap.setAttribute('aria-valuenow', String(Math.round(pctFromAudio())));
+            }
+
+            function seekFromClientX(clientX) {
+                const rect = barWrap.getBoundingClientRect();
+                if (!rect.width || !audio.duration || !Number.isFinite(audio.duration)) {
+                    return;
+                }
+                const ratio = Math.min(1, Math.max(0, (clientX - rect.left) / rect.width));
+                audio.currentTime = ratio * audio.duration;
+                updateProgressUi();
+            }
+
+            audio.addEventListener('loadedmetadata', updateProgressUi);
+            audio.addEventListener('durationchange', updateProgressUi);
+            audio.addEventListener('timeupdate', updateProgressUi);
+            audio.addEventListener('play', () => {
+                row.classList.add('is-playing');
+                pauseOtherGenreAudios(audio);
+                updateProgressUi();
+            });
+            audio.addEventListener('pause', () => {
+                row.classList.remove('is-playing');
+                updateProgressUi();
+            });
+            audio.addEventListener('ended', () => {
+                row.classList.remove('is-playing');
+                audio.currentTime = 0;
+                fillEl.style.width = '0%';
+                elapsedEl.textContent = formatDuration(0);
+                barWrap.setAttribute('aria-valuenow', '0');
+            });
+
+            barWrap.addEventListener('click', event => {
+                event.stopPropagation();
+                seekFromClientX(event.clientX);
+            });
+
+            let dragging = false;
+            barWrap.addEventListener('pointerdown', event => {
+                dragging = true;
+                barWrap.setPointerCapture(event.pointerId);
+                seekFromClientX(event.clientX);
+            });
+            barWrap.addEventListener('pointermove', event => {
+                if (!dragging) {
+                    return;
+                }
+                seekFromClientX(event.clientX);
+            });
+            barWrap.addEventListener('pointerup', event => {
+                dragging = false;
+                try {
+                    barWrap.releasePointerCapture(event.pointerId);
+                } catch (_) {
+                    /* ignore if not captured */
+                }
+            });
+            barWrap.addEventListener('pointercancel', () => {
+                dragging = false;
+            });
+
+            if (btn) {
+                btn.addEventListener('click', event => {
+                    event.stopPropagation();
+                    if (audio.paused) {
+                        audio.play().catch(() => { });
+                    } else {
+                        audio.pause();
+                    }
+                });
+            }
+
+            row.addEventListener('click', event => {
+                if (event.target.closest('.play-btn') || event.target.closest('.genre-demo-progress-bar-wrap')) {
+                    return;
+                }
+                btn?.click();
+            });
+
+            updateProgressUi();
+        }
+
+        genreDemoRows.forEach(bindGenreListenRow);
+
+        if (genreWords.length > 0 || genreImages.length > 0) {
+            applyGenreVisual(0);
+            setInterval(() => {
+                applyGenreVisual(activeGenreIndex + 1);
+            }, 3000);
+        }
 
         // Playlist active track toggling
         const playlistTracks = document.querySelectorAll('.playlist .track');
