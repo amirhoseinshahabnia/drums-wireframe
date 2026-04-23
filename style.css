@@ -4868,6 +4868,68 @@ body.dark-theme .btn-cta-primary:hover:not(.btn-glass) {
   background: hsla(0, 0%, 100%, 0.05);
 }
 
+.genre-listen-section--twoup .genre-demo-panel--twoup {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.genre-listen-section--twoup .genre-demo-panel--twoup .genre-demo-row.track {
+  grid-template-columns: 100px minmax(0, 1fr);
+  gap: 18px;
+  padding: 24px 18px;
+  border: 1px solid hsla(0, 0%, 100%, 0.08);
+  border-radius: 12px;
+  background: hsla(0, 0%, 100%, 0.02);
+}
+
+.genre-listen-section--twoup .genre-demo-panel .genre-demo-row.track:not(:last-child) {
+  border-bottom: none;
+}
+
+.genre-listen-section--twoup .genre-demo-panel--twoup::before,
+.genre-listen-section--twoup .genre-demo-panel--twoup::after {
+  display: none;
+}
+
+.genre-listen-section--twoup .genre-demo-footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  gap: 12px;
+}
+
+.genre-listen-section--twoup .genre-demo-controls-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  justify-content: flex-start;
+  min-width: 0;
+}
+
+.genre-listen-section--twoup .genre-demo-controls-right .genre-demo-progress-cluster {
+  width: min(100%, 250px);
+}
+
+.genre-listen-section--twoup .genre-demo-controls-right .genre-demo-play-slot .play-btn {
+  width: 32px;
+  height: 32px;
+  font-size: 11px;
+}
+
+.genre-listen-section--twoup .genre-demo-genre-badge {
+  margin-right: 2px;
+}
+
 .genre-demo-main {
   display: flex;
   flex-direction: column;
@@ -5156,6 +5218,34 @@ body.dark-theme .btn-cta-primary:hover:not(.btn-glass) {
     grid-template-columns: 2.35rem minmax(0, 1fr) 2.35rem;
     width: 100%;
     min-width: 0;
+  }
+
+  .genre-listen-section--twoup .genre-demo-panel--twoup {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .genre-listen-section--twoup .genre-demo-panel--twoup .genre-demo-row.track {
+    grid-template-columns: 100px minmax(0, 1fr);
+    grid-template-rows: none;
+    grid-template-areas: none;
+    gap: 14px;
+    padding: 18px 14px;
+  }
+
+  .genre-listen-section--twoup .genre-demo-footer {
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .genre-listen-section--twoup .genre-demo-controls-right {
+    width: auto;
+    justify-content: flex-start;
+  }
+
+  .genre-listen-section--twoup .genre-demo-controls-right .genre-demo-progress-cluster {
+    width: 100%;
   }
 }
 
