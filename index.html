@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body class="dark-theme">
 
     <header class="nav">
         <div class="container nav-inner">
@@ -2119,47 +2119,8 @@
     <footer class="footer">
         <div class="container center">
             <p>© Steven Slate Drums</p>
-            <div class="theme-switcher">
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                    <span class="theme-icon">☀️</span>
-                    <span class="theme-label">Light Mode</span>
-                </button>
-            </div>
         </div>
     </footer>
-
-    <script>
-        // Theme switcher functionality
-        const themeToggle = document.getElementById('themeToggle');
-        const body = document.body;
-
-        // Check for saved theme preference or default to dark mode
-        const currentTheme = localStorage.getItem('theme') || 'dark';
-
-        if (currentTheme === 'dark') {
-            body.classList.add('dark-theme');
-            updateThemeToggle('dark');
-        }
-
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-theme');
-            const theme = body.classList.contains('dark-theme') ? 'dark' : 'light';
-            localStorage.setItem('theme', theme);
-            updateThemeToggle(theme);
-        });
-
-        function updateThemeToggle(theme) {
-            const icon = themeToggle.querySelector('.theme-icon');
-            const label = themeToggle.querySelector('.theme-label');
-            if (theme === 'dark') {
-                icon.textContent = '☀️';
-                label.textContent = 'Light Mode';
-            } else {
-                icon.textContent = '🌙';
-                label.textContent = 'Dark Mode';
-            }
-        }
-    </script>
 
 </body>
 
