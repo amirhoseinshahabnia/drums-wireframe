@@ -1086,7 +1086,7 @@ body.dark-theme .nav {
 .track.genre-rock:hover::after {
   background: linear-gradient(
     90deg,
-    hsla(37, 60%, 62%, 0.1) 0%,
+    hsl(from var(--genre-rock) h s l / 0.1) 0%,
     transparent 100%
   );
   opacity: 1;
@@ -1095,7 +1095,7 @@ body.dark-theme .nav {
 .track.genre-metal:hover::after {
   background: linear-gradient(
     90deg,
-    hsla(0, 60%, 42%, 0.1) 0%,
+    hsl(from var(--genre-metal) h s l / 0.1) 0%,
     transparent 100%
   );
   opacity: 1;
@@ -1104,7 +1104,7 @@ body.dark-theme .nav {
 .track.genre-jazz:hover::after {
   background: linear-gradient(
     90deg,
-    hsla(175, 45%, 45%, 0.1) 0%,
+    hsl(from var(--genre-jazz) h s l / 0.1) 0%,
     transparent 100%
   );
   opacity: 1;
@@ -1113,7 +1113,7 @@ body.dark-theme .nav {
 .track.genre-electronic:hover::after {
   background: linear-gradient(
     90deg,
-    hsla(225, 100%, 70%, 0.1) 0%,
+    hsl(from var(--genre-electronic) h s l / 0.1) 0%,
     transparent 100%
   );
   opacity: 1;
@@ -1122,7 +1122,7 @@ body.dark-theme .nav {
 .track.genre-hiphop:hover::after {
   background: linear-gradient(
     90deg,
-    hsla(248, 65%, 64%, 0.1) 0%,
+    hsl(from var(--genre-hiphop) h s l / 0.1) 0%,
     transparent 100%
   );
   opacity: 1;
@@ -1131,7 +1131,7 @@ body.dark-theme .nav {
 .track.genre-pop:hover::after {
   background: linear-gradient(
     90deg,
-    hsla(318, 62%, 60%, 0.12) 0%,
+    hsl(from var(--genre-pop) h s l / 0.12) 0%,
     transparent 100%
   );
   opacity: 1;
@@ -1140,7 +1140,7 @@ body.dark-theme .nav {
 .track.genre-country:hover::after {
   background: linear-gradient(
     90deg,
-    hsla(108, 44%, 52%, 0.12) 0%,
+    hsl(from var(--genre-country) h s l / 0.12) 0%,
     transparent 100%
   );
   opacity: 1;
@@ -1174,7 +1174,7 @@ body.dark-theme .nav {
 .track.genre-rock.is-playing::before {
   background: radial-gradient(
     120% 120% at 20% 50%,
-    hsla(37, 60%, 62%, 0.55) 0%,
+    hsl(from var(--genre-rock) h s l / 0.55) 0%,
     transparent 70%
   );
 }
@@ -1182,7 +1182,7 @@ body.dark-theme .nav {
 .track.genre-metal.is-playing::before {
   background: radial-gradient(
     120% 120% at 20% 50%,
-    hsla(0, 60%, 42%, 0.55) 0%,
+    hsl(from var(--genre-metal) h s l / 0.55) 0%,
     transparent 70%
   );
 }
@@ -1190,7 +1190,7 @@ body.dark-theme .nav {
 .track.genre-jazz.is-playing::before {
   background: radial-gradient(
     120% 120% at 20% 50%,
-    hsla(175, 45%, 45%, 0.55) 0%,
+    hsl(from var(--genre-jazz) h s l / 0.55) 0%,
     transparent 70%
   );
 }
@@ -1198,7 +1198,7 @@ body.dark-theme .nav {
 .track.genre-electronic.is-playing::before {
   background: radial-gradient(
     120% 120% at 20% 50%,
-    hsla(225, 100%, 70%, 0.55) 0%,
+    hsl(from var(--genre-electronic) h s l / 0.55) 0%,
     transparent 70%
   );
 }
@@ -1206,7 +1206,7 @@ body.dark-theme .nav {
 .track.genre-hiphop.is-playing::before {
   background: radial-gradient(
     120% 120% at 20% 50%,
-    hsla(248, 65%, 64%, 0.55) 0%,
+    hsl(from var(--genre-hiphop) h s l / 0.55) 0%,
     transparent 70%
   );
 }
@@ -1214,7 +1214,7 @@ body.dark-theme .nav {
 .track.genre-pop.is-playing::before {
   background: radial-gradient(
     120% 120% at 20% 50%,
-    hsla(318, 62%, 60%, 0.55) 0%,
+    hsl(from var(--genre-pop) h s l / 0.55) 0%,
     transparent 70%
   );
 }
@@ -1222,7 +1222,7 @@ body.dark-theme .nav {
 .track.genre-country.is-playing::before {
   background: radial-gradient(
     120% 120% at 20% 50%,
-    hsla(108, 44%, 52%, 0.55) 0%,
+    hsl(from var(--genre-country) h s l / 0.55) 0%,
     transparent 70%
   );
 }
@@ -1234,7 +1234,7 @@ body.dark-theme .nav {
 .track.genre-rock.is-playing::after {
   background: linear-gradient(
     90deg,
-    hsla(37, 60%, 62%, 0.14) 0%,
+    hsl(from var(--genre-rock) h s l / 0.14) 0%,
     transparent 100%
   );
 }
@@ -1242,7 +1242,7 @@ body.dark-theme .nav {
 .track.genre-metal.is-playing::after {
   background: linear-gradient(
     90deg,
-    hsla(0, 60%, 42%, 0.14) 0%,
+    hsl(from var(--genre-metal) h s l / 0.14) 0%,
     transparent 100%
   );
 }
@@ -1250,7 +1250,7 @@ body.dark-theme .nav {
 .track.genre-jazz.is-playing::after {
   background: linear-gradient(
     90deg,
-    hsla(175, 45%, 45%, 0.14) 0%,
+    hsl(from var(--genre-jazz) h s l / 0.14) 0%,
     transparent 100%
   );
 }
@@ -1258,7 +1258,7 @@ body.dark-theme .nav {
 .track.genre-electronic.is-playing::after {
   background: linear-gradient(
     90deg,
-    hsla(225, 100%, 70%, 0.14) 0%,
+    hsl(from var(--genre-electronic) h s l / 0.14) 0%,
     transparent 100%
   );
 }
@@ -1266,7 +1266,7 @@ body.dark-theme .nav {
 .track.genre-hiphop.is-playing::after {
   background: linear-gradient(
     90deg,
-    hsla(248, 65%, 64%, 0.14) 0%,
+    hsl(from var(--genre-hiphop) h s l / 0.14) 0%,
     transparent 100%
   );
 }
@@ -1274,7 +1274,7 @@ body.dark-theme .nav {
 .track.genre-pop.is-playing::after {
   background: linear-gradient(
     90deg,
-    hsla(318, 62%, 60%, 0.14) 0%,
+    hsl(from var(--genre-pop) h s l / 0.14) 0%,
     transparent 100%
   );
 }
@@ -1282,7 +1282,7 @@ body.dark-theme .nav {
 .track.genre-country.is-playing::after {
   background: linear-gradient(
     90deg,
-    hsla(108, 44%, 52%, 0.14) 0%,
+    hsl(from var(--genre-country) h s l / 0.14) 0%,
     transparent 100%
   );
 }
@@ -1576,8 +1576,8 @@ body.dark-theme .nav {
 .track.genre-rock.is-playing .play-btn {
   background: radial-gradient(
     circle at center,
-    hsla(37, 75%, 72%, 0.35) 0%,
-    hsla(37, 75%, 72%, 0.1) 100%
+    hsl(from var(--genre-rock-shine) h s l / 0.35) 0%,
+    hsl(from var(--genre-rock-shine) h s l / 0.1) 100%
   );
   box-shadow: 0 0 16px var(--genre-rock-shine);
 }
@@ -1585,8 +1585,8 @@ body.dark-theme .nav {
 .track.genre-metal.is-playing .play-btn {
   background: radial-gradient(
     circle at center,
-    hsla(0, 70%, 52%, 0.35) 0%,
-    hsla(0, 70%, 52%, 0.1) 100%
+    hsl(from var(--genre-metal-shine) h s l / 0.35) 0%,
+    hsl(from var(--genre-metal-shine) h s l / 0.1) 100%
   );
   box-shadow: 0 0 16px var(--genre-metal-shine);
 }
@@ -1594,8 +1594,8 @@ body.dark-theme .nav {
 .track.genre-jazz.is-playing .play-btn {
   background: radial-gradient(
     circle at center,
-    hsla(175, 60%, 55%, 0.35) 0%,
-    hsla(175, 60%, 55%, 0.1) 100%
+    hsl(from var(--genre-jazz-shine) h s l / 0.35) 0%,
+    hsl(from var(--genre-jazz-shine) h s l / 0.1) 100%
   );
   box-shadow: 0 0 16px var(--genre-jazz-shine);
 }
@@ -1603,8 +1603,8 @@ body.dark-theme .nav {
 .track.genre-electronic.is-playing .play-btn {
   background: radial-gradient(
     circle at center,
-    hsla(225, 100%, 78%, 0.35) 0%,
-    hsla(225, 100%, 78%, 0.1) 100%
+    hsl(from var(--genre-electronic-shine) h s l / 0.35) 0%,
+    hsl(from var(--genre-electronic-shine) h s l / 0.1) 100%
   );
   box-shadow: 0 0 16px var(--genre-electronic-shine);
 }
@@ -1612,8 +1612,8 @@ body.dark-theme .nav {
 .track.genre-hiphop.is-playing .play-btn {
   background: radial-gradient(
     circle at center,
-    hsla(248, 75%, 72%, 0.35) 0%,
-    hsla(248, 75%, 72%, 0.1) 100%
+    hsl(from var(--genre-hiphop-shine) h s l / 0.35) 0%,
+    hsl(from var(--genre-hiphop-shine) h s l / 0.1) 100%
   );
   box-shadow: 0 0 16px var(--genre-hiphop-shine);
 }
@@ -1621,8 +1621,8 @@ body.dark-theme .nav {
 .track.genre-pop.is-playing .play-btn {
   background: radial-gradient(
     circle at center,
-    hsla(318, 72%, 70%, 0.35) 0%,
-    hsla(318, 72%, 70%, 0.1) 100%
+    hsl(from var(--genre-pop--shine) h s l / 0.35) 0%,
+    hsl(from var(--genre-pop--shine) h s l / 0.1) 100%
   );
   box-shadow: 0 0 16px var(--genre-pop--shine);
 }
@@ -1630,8 +1630,8 @@ body.dark-theme .nav {
 .track.genre-country.is-playing .play-btn {
   background: radial-gradient(
     circle at center,
-    hsla(108, 58%, 62%, 0.35) 0%,
-    hsla(108, 58%, 62%, 0.1) 100%
+    hsl(from var(--genre-country--shine) h s l / 0.35) 0%,
+    hsl(from var(--genre-country--shine) h s l / 0.1) 100%
   );
   box-shadow: 0 0 16px var(--genre-country--shine);
 }
@@ -2079,43 +2079,43 @@ body.dark-theme .play-btn {
 
 /* Genre colors visible by default in dark theme */
 body.dark-theme .track.genre-rock .play-btn {
-  border-color: hsla(37, 60%, 62%, 0.55);
+  border-color: hsl(from var(--genre-rock) h s l / 0.55);
   color: var(--genre-rock);
   box-shadow: 0 0 10px var(--genre-rock-shine);
 }
 
 body.dark-theme .track.genre-metal .play-btn {
-  border-color: hsla(0, 60%, 42%, 0.55);
+  border-color: hsl(from var(--genre-metal) h s l / 0.55);
   color: var(--genre-metal);
   box-shadow: 0 0 10px var(--genre-metal-shine);
 }
 
 body.dark-theme .track.genre-jazz .play-btn {
-  border-color: hsla(175, 45%, 45%, 0.55);
+  border-color: hsl(from var(--genre-jazz) h s l / 0.55);
   color: var(--genre-jazz);
   box-shadow: 0 0 10px var(--genre-jazz-shine);
 }
 
 body.dark-theme .track.genre-electronic .play-btn {
-  border-color: hsla(225, 100%, 70%, 0.55);
+  border-color: hsl(from var(--genre-electronic) h s l / 0.55);
   color: var(--genre-electronic);
   box-shadow: 0 0 10px var(--genre-electronic-shine);
 }
 
 body.dark-theme .track.genre-hiphop .play-btn {
-  border-color: hsla(248, 65%, 64%, 0.55);
+  border-color: hsl(from var(--genre-hiphop) h s l / 0.55);
   color: var(--genre-hiphop);
   box-shadow: 0 0 10px var(--genre-hiphop-shine);
 }
 
 body.dark-theme .track.genre-pop .play-btn {
-  border-color: hsla(318, 62%, 60%, 0.55);
+  border-color: hsl(from var(--genre-pop) h s l / 0.55);
   color: var(--genre-pop);
   box-shadow: 0 0 10px var(--genre-pop--shine);
 }
 
 body.dark-theme .track.genre-country .play-btn {
-  border-color: hsla(108, 44%, 52%, 0.55);
+  border-color: hsl(from var(--genre-country) h s l / 0.55);
   color: var(--genre-country);
   box-shadow: 0 0 10px var(--genre-country--shine);
 }
@@ -2123,8 +2123,8 @@ body.dark-theme .track.genre-country .play-btn {
 body.dark-theme .track.genre-rock .play-btn:hover {
   background: radial-gradient(
     circle at center,
-    hsla(37, 75%, 72%, 0.35) 0%,
-    hsla(37, 75%, 72%, 0.12) 100%
+    hsl(from var(--genre-rock-shine) h s l / 0.35) 0%,
+    hsl(from var(--genre-rock-shine) h s l / 0.12) 100%
   );
   border-color: var(--genre-rock);
   color: var(--genre-rock);
@@ -2134,8 +2134,8 @@ body.dark-theme .track.genre-rock .play-btn:hover {
 body.dark-theme .track.genre-metal .play-btn:hover {
   background: radial-gradient(
     circle at center,
-    hsla(0, 70%, 52%, 0.35) 0%,
-    hsla(0, 70%, 52%, 0.12) 100%
+    hsl(from var(--genre-metal-shine) h s l / 0.35) 0%,
+    hsl(from var(--genre-metal-shine) h s l / 0.12) 100%
   );
   border-color: var(--genre-metal);
   color: var(--genre-metal);
@@ -2145,8 +2145,8 @@ body.dark-theme .track.genre-metal .play-btn:hover {
 body.dark-theme .track.genre-jazz .play-btn:hover {
   background: radial-gradient(
     circle at center,
-    hsla(175, 60%, 55%, 0.35) 0%,
-    hsla(175, 60%, 55%, 0.12) 100%
+    hsl(from var(--genre-jazz-shine) h s l / 0.35) 0%,
+    hsl(from var(--genre-jazz-shine) h s l / 0.12) 100%
   );
   border-color: var(--genre-jazz);
   color: var(--genre-jazz);
@@ -2156,8 +2156,8 @@ body.dark-theme .track.genre-jazz .play-btn:hover {
 body.dark-theme .track.genre-electronic .play-btn:hover {
   background: radial-gradient(
     circle at center,
-    hsla(225, 100%, 78%, 0.35) 0%,
-    hsla(225, 100%, 78%, 0.12) 100%
+    hsl(from var(--genre-electronic-shine) h s l / 0.35) 0%,
+    hsl(from var(--genre-electronic-shine) h s l / 0.12) 100%
   );
   border-color: var(--genre-electronic);
   color: var(--genre-electronic);
@@ -2167,8 +2167,8 @@ body.dark-theme .track.genre-electronic .play-btn:hover {
 body.dark-theme .track.genre-hiphop .play-btn:hover {
   background: radial-gradient(
     circle at center,
-    hsla(248, 75%, 72%, 0.35) 0%,
-    hsla(248, 75%, 72%, 0.12) 100%
+    hsl(from var(--genre-hiphop-shine) h s l / 0.35) 0%,
+    hsl(from var(--genre-hiphop-shine) h s l / 0.12) 100%
   );
   border-color: var(--genre-hiphop);
   color: var(--genre-hiphop);
@@ -2178,8 +2178,8 @@ body.dark-theme .track.genre-hiphop .play-btn:hover {
 body.dark-theme .track.genre-pop .play-btn:hover {
   background: radial-gradient(
     circle at center,
-    hsla(318, 72%, 70%, 0.35) 0%,
-    hsla(318, 72%, 70%, 0.12) 100%
+    hsl(from var(--genre-pop--shine) h s l / 0.35) 0%,
+    hsl(from var(--genre-pop--shine) h s l / 0.12) 100%
   );
   border-color: var(--genre-pop);
   color: var(--genre-pop);
@@ -2189,8 +2189,8 @@ body.dark-theme .track.genre-pop .play-btn:hover {
 body.dark-theme .track.genre-country .play-btn:hover {
   background: radial-gradient(
     circle at center,
-    hsla(108, 58%, 62%, 0.35) 0%,
-    hsla(108, 58%, 62%, 0.12) 100%
+    hsl(from var(--genre-country--shine) h s l / 0.35) 0%,
+    hsl(from var(--genre-country--shine) h s l / 0.12) 100%
   );
   border-color: var(--genre-country);
   color: var(--genre-country);
@@ -4889,7 +4889,9 @@ body.dark-theme .btn-cta-primary:hover:not(.btn-glass) {
   background: hsla(0, 0%, 100%, 0.02);
 }
 
-.genre-listen-section--twoup .genre-demo-panel .genre-demo-row.track:not(:last-child) {
+.genre-listen-section--twoup
+  .genre-demo-panel
+  .genre-demo-row.track:not(:last-child) {
   border-bottom: none;
 }
 
@@ -4916,11 +4918,16 @@ body.dark-theme .btn-cta-primary:hover:not(.btn-glass) {
   min-width: 0;
 }
 
-.genre-listen-section--twoup .genre-demo-controls-right .genre-demo-progress-cluster {
+.genre-listen-section--twoup
+  .genre-demo-controls-right
+  .genre-demo-progress-cluster {
   width: min(100%, 250px);
 }
 
-.genre-listen-section--twoup .genre-demo-controls-right .genre-demo-play-slot .play-btn {
+.genre-listen-section--twoup
+  .genre-demo-controls-right
+  .genre-demo-play-slot
+  .play-btn {
   width: 32px;
   height: 32px;
   font-size: 11px;
@@ -5244,7 +5251,9 @@ body.dark-theme .btn-cta-primary:hover:not(.btn-glass) {
     justify-content: flex-start;
   }
 
-  .genre-listen-section--twoup .genre-demo-controls-right .genre-demo-progress-cluster {
+  .genre-listen-section--twoup
+    .genre-demo-controls-right
+    .genre-demo-progress-cluster {
     width: 100%;
   }
 }
